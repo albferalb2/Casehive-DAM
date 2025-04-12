@@ -1,0 +1,1136 @@
+{
+    "viviendas": {
+        "1": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 4 de Madrid, Madrid",
+            "superficie_m2": 53,
+            "habitaciones": 6,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 245614,
+            "año_construcción": 2016,
+            "estado": "Reformado",
+            "certificación_energética": "D",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 6 habitaciones y 4 baños. Incluye Piscina, Patio, Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen1_1.jpg",
+                "https://ejemplo.com/imagen1_2.jpg"
+            ],
+            "extras": [
+                "Garaje"
+            ]
+        },
+        "2": {
+            "tipo": "Piso",
+            "ubicación": "C/ 62 de Zaragoza, Zaragoza",
+            "superficie_m2": 205,
+            "habitaciones": 5,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 366161,
+            "año_construcción": 1992,
+            "estado": "Nuevo",
+            "certificación_energética": "E",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 5 habitaciones y 3 baños. Incluye Jardín, Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen2_1.jpg",
+                "https://ejemplo.com/imagen2_2.jpg"
+            ],
+            "extras": [
+                "Garaje",
+                "Solarium",
+                "Trastero",
+                "Jardín"
+            ]
+        },
+        "3": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 6 de San Sebastián, San Sebastián",
+            "superficie_m2": 72,
+            "habitaciones": 2,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 618532,
+            "año_construcción": 2015,
+            "estado": "Reformado",
+            "certificación_energética": "C",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 2 habitaciones y 3 baños. Incluye Garaje, Terraza, Patio.",
+            "imágenes": [
+                "https://ejemplo.com/imagen3_1.jpg",
+                "https://ejemplo.com/imagen3_2.jpg"
+            ],
+            "extras": [
+                "Ascensor",
+                "Terraza"
+            ]
+        },
+        "4": {
+            "tipo": "Loft",
+            "ubicación": "C/ 57 de San Sebastián, San Sebastián",
+            "superficie_m2": 223,
+            "habitaciones": 6,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 439307,
+            "año_construcción": 1991,
+            "estado": "Reformado",
+            "certificación_energética": "A+",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 6 habitaciones y 3 baños. Incluye Patio, Garaje, Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen4_1.jpg",
+                "https://ejemplo.com/imagen4_2.jpg"
+            ],
+            "extras": [
+                "Solarium",
+                "Garaje",
+                "Trastero",
+                "Patio"
+            ]
+        },
+        "5": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 34 de Valencia, Valencia",
+            "superficie_m2": 60,
+            "habitaciones": 2,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 731593,
+            "año_construcción": 1984,
+            "estado": "A reformar",
+            "certificación_energética": "D",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 2 habitaciones y 4 baños. Incluye Solarium, Terraza, Piscina, Trastero.",
+            "imágenes": [
+                "https://ejemplo.com/imagen5_1.jpg",
+                "https://ejemplo.com/imagen5_2.jpg"
+            ],
+            "extras": [
+                "Jardín",
+                "Piscina",
+                "Garaje"
+            ]
+        },
+        "6": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 93 de Alicante, Alicante",
+            "superficie_m2": 269,
+            "habitaciones": 1,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 459862,
+            "año_construcción": 2015,
+            "estado": "A reformar",
+            "certificación_energética": "D",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 1 habitaciones y 3 baños. Incluye Trastero, Jardín, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen6_1.jpg",
+                "https://ejemplo.com/imagen6_2.jpg"
+            ],
+            "extras": [
+                "Trastero"
+            ]
+        },
+        "7": {
+            "tipo": "Chalet",
+            "ubicación": "C/ 81 de Bilbao, Bilbao",
+            "superficie_m2": 88,
+            "habitaciones": 6,
+            "baños": 4,
+            "plantas": 2,
+            "precio": 873948,
+            "año_construcción": 2019,
+            "estado": "Bueno",
+            "certificación_energética": "B",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 6 habitaciones y 4 baños. Incluye Ascensor, Garaje, Patio.",
+            "imágenes": [
+                "https://ejemplo.com/imagen7_1.jpg",
+                "https://ejemplo.com/imagen7_2.jpg"
+            ],
+            "extras": [
+                "Garaje"
+            ]
+        },
+        "8": {
+            "tipo": "Loft",
+            "ubicación": "C/ 70 de Zaragoza, Zaragoza",
+            "superficie_m2": 57,
+            "habitaciones": 1,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 690873,
+            "año_construcción": 1984,
+            "estado": "A reformar",
+            "certificación_energética": "B",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 1 habitaciones y 3 baños. Incluye Patio, Solarium, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen8_1.jpg",
+                "https://ejemplo.com/imagen8_2.jpg"
+            ],
+            "extras": [
+                "Solarium"
+            ]
+        },
+        "9": {
+            "tipo": "Piso",
+            "ubicación": "C/ 89 de Málaga, Málaga",
+            "superficie_m2": 119,
+            "habitaciones": 2,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 538843,
+            "año_construcción": 2019,
+            "estado": "Nuevo",
+            "certificación_energética": "D",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 2 habitaciones y 4 baños. Incluye Patio, Piscina, Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen9_1.jpg",
+                "https://ejemplo.com/imagen9_2.jpg"
+            ],
+            "extras": [
+                "Patio",
+                "Solarium",
+                "Terraza",
+                "Garaje"
+            ]
+        },
+        "10": {
+            "tipo": "Loft",
+            "ubicación": "C/ 57 de Málaga, Málaga",
+            "superficie_m2": 58,
+            "habitaciones": 3,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 561073,
+            "año_construcción": 1982,
+            "estado": "Bueno",
+            "certificación_energética": "A",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 3 habitaciones y 4 baños. Incluye Trastero, Jardín, Ascensor, Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen10_1.jpg",
+                "https://ejemplo.com/imagen10_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Patio",
+                "Trastero",
+                "Jardín"
+            ]
+        },
+        "11": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 14 de Granada, Granada",
+            "superficie_m2": 114,
+            "habitaciones": 5,
+            "baños": 1,
+            "plantas": 2,
+            "precio": 656980,
+            "año_construcción": 1986,
+            "estado": "Reformado",
+            "certificación_energética": "A+",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 5 habitaciones y 1 baños. Incluye Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen11_1.jpg",
+                "https://ejemplo.com/imagen11_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Patio",
+                "Garaje"
+            ]
+        },
+        "12": {
+            "tipo": "Piso",
+            "ubicación": "C/ 17 de San Sebastián, San Sebastián",
+            "superficie_m2": 228,
+            "habitaciones": 3,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 882645,
+            "año_construcción": 2005,
+            "estado": "A reformar",
+            "certificación_energética": "B",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 3 habitaciones y 4 baños. Incluye Trastero, Patio, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen12_1.jpg",
+                "https://ejemplo.com/imagen12_2.jpg"
+            ],
+            "extras": [
+                "Piscina",
+                "Garaje"
+            ]
+        },
+        "13": {
+            "tipo": "Chalet",
+            "ubicación": "C/ 74 de San Sebastián, San Sebastián",
+            "superficie_m2": 123,
+            "habitaciones": 3,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 642291,
+            "año_construcción": 1984,
+            "estado": "A reformar",
+            "certificación_energética": "E",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 3 habitaciones y 4 baños. Incluye Patio.",
+            "imágenes": [
+                "https://ejemplo.com/imagen13_1.jpg",
+                "https://ejemplo.com/imagen13_2.jpg"
+            ],
+            "extras": [
+                "Jardín"
+            ]
+        },
+        "14": {
+            "tipo": "Loft",
+            "ubicación": "C/ 18 de Sevilla, Sevilla",
+            "superficie_m2": 167,
+            "habitaciones": 4,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 215153,
+            "año_construcción": 2023,
+            "estado": "A reformar",
+            "certificación_energética": "E",
+            "descripción": "Impresionantes vistas panorámicas desde la terraza. Cuenta con 4 habitaciones y 1 baños. Incluye Trastero, Terraza, Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen14_1.jpg",
+                "https://ejemplo.com/imagen14_2.jpg"
+            ],
+            "extras": [
+                "Piscina"
+            ]
+        },
+        "15": {
+            "tipo": "Loft",
+            "ubicación": "C/ 57 de Granada, Granada",
+            "superficie_m2": 220,
+            "habitaciones": 4,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 617932,
+            "año_construcción": 2018,
+            "estado": "Reformado",
+            "certificación_energética": "A+",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 4 habitaciones y 3 baños. Incluye Piscina, Ascensor, Jardín, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen15_1.jpg",
+                "https://ejemplo.com/imagen15_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Trastero",
+                "Solarium"
+            ]
+        },
+        "16": {
+            "tipo": "Piso",
+            "ubicación": "C/ 32 de Alicante, Alicante",
+            "superficie_m2": 299,
+            "habitaciones": 5,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 886369,
+            "año_construcción": 1997,
+            "estado": "Nuevo",
+            "certificación_energética": "A+",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 5 habitaciones y 4 baños. Incluye Ascensor, Trastero, Jardín, Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen16_1.jpg",
+                "https://ejemplo.com/imagen16_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Patio",
+                "Garaje"
+            ]
+        },
+        "17": {
+            "tipo": "Loft",
+            "ubicación": "C/ 45 de San Sebastián, San Sebastián",
+            "superficie_m2": 69,
+            "habitaciones": 6,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 725061,
+            "año_construcción": 2017,
+            "estado": "A reformar",
+            "certificación_energética": "C",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 6 habitaciones y 3 baños. Incluye Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen17_1.jpg",
+                "https://ejemplo.com/imagen17_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Solarium",
+                "Trastero"
+            ]
+        },
+        "18": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 19 de Zaragoza, Zaragoza",
+            "superficie_m2": 189,
+            "habitaciones": 1,
+            "baños": 2,
+            "plantas": 2,
+            "precio": 675171,
+            "año_construcción": 1984,
+            "estado": "Nuevo",
+            "certificación_energética": "B",
+            "descripción": "Cercana a todos los servicios: supermercados, colegios y transporte público. Cuenta con 1 habitaciones y 2 baños. Incluye Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen18_1.jpg",
+                "https://ejemplo.com/imagen18_2.jpg"
+            ],
+            "extras": [
+                "Garaje",
+                "Trastero",
+                "Terraza",
+                "Jardín"
+            ]
+        },
+        "19": {
+            "tipo": "Loft",
+            "ubicación": "C/ 45 de Bilbao, Bilbao",
+            "superficie_m2": 294,
+            "habitaciones": 3,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 302912,
+            "año_construcción": 1995,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 3 habitaciones y 1 baños. Incluye Trastero, Jardín, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen19_1.jpg",
+                "https://ejemplo.com/imagen19_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Trastero"
+            ]
+        },
+        "20": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 2 de Bilbao, Bilbao",
+            "superficie_m2": 264,
+            "habitaciones": 3,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 333063,
+            "año_construcción": 1995,
+            "estado": "Reformado",
+            "certificación_energética": "A+",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 3 habitaciones y 3 baños. Incluye Ascensor, Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen20_1.jpg",
+                "https://ejemplo.com/imagen20_2.jpg"
+            ],
+            "extras": [
+                "Patio",
+                "Trastero"
+            ]
+        },
+        "21": {
+            "tipo": "Casa Adosada",
+            "ubicación": "C/ 91 de Alicante, Alicante",
+            "superficie_m2": 132,
+            "habitaciones": 4,
+            "baños": 4,
+            "plantas": 3,
+            "precio": 224944,
+            "año_construcción": 2013,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 4 habitaciones y 4 baños. Incluye Piscina, Solarium, Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen21_1.jpg",
+                "https://ejemplo.com/imagen21_2.jpg"
+            ],
+            "extras": [
+                "Terraza"
+            ]
+        },
+        "22": {
+            "tipo": "Piso",
+            "ubicación": "C/ 33 de Zaragoza, Zaragoza",
+            "superficie_m2": 187,
+            "habitaciones": 6,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 814620,
+            "año_construcción": 1988,
+            "estado": "Reformado",
+            "certificación_energética": "E",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 6 habitaciones y 2 baños. Incluye Trastero.",
+            "imágenes": [
+                "https://ejemplo.com/imagen22_1.jpg",
+                "https://ejemplo.com/imagen22_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Jardín"
+            ]
+        },
+        "23": {
+            "tipo": "Casa Adosada",
+            "ubicación": "C/ 29 de Madrid, Madrid",
+            "superficie_m2": 223,
+            "habitaciones": 6,
+            "baños": 4,
+            "plantas": 2,
+            "precio": 696392,
+            "año_construcción": 2010,
+            "estado": "Bueno",
+            "certificación_energética": "A+",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 6 habitaciones y 4 baños. Incluye Trastero, Patio, Piscina, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen23_1.jpg",
+                "https://ejemplo.com/imagen23_2.jpg"
+            ],
+            "extras": [
+                "Piscina"
+            ]
+        },
+        "24": {
+            "tipo": "Piso",
+            "ubicación": "C/ 100 de Madrid, Madrid",
+            "superficie_m2": 213,
+            "habitaciones": 4,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 528557,
+            "año_construcción": 2012,
+            "estado": "A reformar",
+            "certificación_energética": "D",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 4 habitaciones y 1 baños. Incluye Trastero, Solarium, Garaje, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen24_1.jpg",
+                "https://ejemplo.com/imagen24_2.jpg"
+            ],
+            "extras": [
+                "Garaje"
+            ]
+        },
+        "25": {
+            "tipo": "Casa Adosada",
+            "ubicación": "C/ 64 de Alicante, Alicante",
+            "superficie_m2": 150,
+            "habitaciones": 4,
+            "baños": 1,
+            "plantas": 2,
+            "precio": 558392,
+            "año_construcción": 1990,
+            "estado": "Bueno",
+            "certificación_energética": "A",
+            "descripción": "Cercana a todos los servicios: supermercados, colegios y transporte público. Cuenta con 4 habitaciones y 1 baños. Incluye Trastero, Piscina, Garaje, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen25_1.jpg",
+                "https://ejemplo.com/imagen25_2.jpg"
+            ],
+            "extras": [
+                "Garaje",
+                "Terraza",
+                "Ascensor"
+            ]
+        },
+        "26": {
+            "tipo": "Ático",
+            "ubicación": "C/ 86 de Málaga, Málaga",
+            "superficie_m2": 221,
+            "habitaciones": 1,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 799753,
+            "año_construcción": 2020,
+            "estado": "Reformado",
+            "certificación_energética": "A",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 1 habitaciones y 1 baños. Incluye Ascensor, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen26_1.jpg",
+                "https://ejemplo.com/imagen26_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Jardín"
+            ]
+        },
+        "27": {
+            "tipo": "Ático",
+            "ubicación": "C/ 16 de Bilbao, Bilbao",
+            "superficie_m2": 98,
+            "habitaciones": 1,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 199340,
+            "año_construcción": 2011,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 1 habitaciones y 2 baños. Incluye Jardín, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen27_1.jpg",
+                "https://ejemplo.com/imagen27_2.jpg"
+            ],
+            "extras": [
+                "Jardín"
+            ]
+        },
+        "28": {
+            "tipo": "Piso",
+            "ubicación": "C/ 50 de Bilbao, Bilbao",
+            "superficie_m2": 217,
+            "habitaciones": 2,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 671246,
+            "año_construcción": 2005,
+            "estado": "A reformar",
+            "certificación_energética": "E",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 2 habitaciones y 2 baños. Incluye Patio, Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen28_1.jpg",
+                "https://ejemplo.com/imagen28_2.jpg"
+            ],
+            "extras": [
+                "Patio",
+                "Garaje",
+                "Jardín"
+            ]
+        },
+        "29": {
+            "tipo": "Loft",
+            "ubicación": "C/ 50 de Valencia, Valencia",
+            "superficie_m2": 133,
+            "habitaciones": 5,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 915807,
+            "año_construcción": 2014,
+            "estado": "Bueno",
+            "certificación_energética": "E",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 5 habitaciones y 4 baños. Incluye Solarium, Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen29_1.jpg",
+                "https://ejemplo.com/imagen29_2.jpg"
+            ],
+            "extras": [
+                "Patio",
+                "Garaje"
+            ]
+        },
+        "30": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 63 de Bilbao, Bilbao",
+            "superficie_m2": 58,
+            "habitaciones": 1,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 680846,
+            "año_construcción": 1987,
+            "estado": "Nuevo",
+            "certificación_energética": "E",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 1 habitaciones y 1 baños. Incluye Patio.",
+            "imágenes": [
+                "https://ejemplo.com/imagen30_1.jpg",
+                "https://ejemplo.com/imagen30_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Garaje",
+                "Ascensor",
+                "Patio"
+            ]
+        },
+        "31": {
+            "tipo": "Loft",
+            "ubicación": "C/ 66 de Madrid, Madrid",
+            "superficie_m2": 96,
+            "habitaciones": 3,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 511503,
+            "año_construcción": 2014,
+            "estado": "Nuevo",
+            "certificación_energética": "A+",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 3 habitaciones y 3 baños. Incluye Garaje, Jardín, Ascensor, Piscina.",
+            "imágenes": [
+                "https://ejemplo.com/imagen31_1.jpg",
+                "https://ejemplo.com/imagen31_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Solarium",
+                "Patio"
+            ]
+        },
+        "32": {
+            "tipo": "Loft",
+            "ubicación": "C/ 76 de Málaga, Málaga",
+            "superficie_m2": 76,
+            "habitaciones": 3,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 970872,
+            "año_construcción": 2009,
+            "estado": "Reformado",
+            "certificación_energética": "C",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 3 habitaciones y 2 baños. Incluye Piscina.",
+            "imágenes": [
+                "https://ejemplo.com/imagen32_1.jpg",
+                "https://ejemplo.com/imagen32_2.jpg"
+            ],
+            "extras": [
+                "Ascensor",
+                "Trastero",
+                "Solarium",
+                "Piscina"
+            ]
+        },
+        "33": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 71 de Bilbao, Bilbao",
+            "superficie_m2": 223,
+            "habitaciones": 1,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 464495,
+            "año_construcción": 2018,
+            "estado": "Bueno",
+            "certificación_energética": "A",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 1 habitaciones y 2 baños. Incluye Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen33_1.jpg",
+                "https://ejemplo.com/imagen33_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Garaje",
+                "Patio"
+            ]
+        },
+        "34": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 67 de San Sebastián, San Sebastián",
+            "superficie_m2": 181,
+            "habitaciones": 2,
+            "baños": 1,
+            "plantas": 3,
+            "precio": 191449,
+            "año_construcción": 2006,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 2 habitaciones y 1 baños. Incluye Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen34_1.jpg",
+                "https://ejemplo.com/imagen34_2.jpg"
+            ],
+            "extras": [
+                "Piscina",
+                "Trastero"
+            ]
+        },
+        "35": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 21 de Málaga, Málaga",
+            "superficie_m2": 256,
+            "habitaciones": 1,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 447366,
+            "año_construcción": 1987,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 1 habitaciones y 1 baños. Incluye Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen35_1.jpg",
+                "https://ejemplo.com/imagen35_2.jpg"
+            ],
+            "extras": [
+                "Terraza"
+            ]
+        },
+        "36": {
+            "tipo": "Casa Adosada",
+            "ubicación": "C/ 10 de Málaga, Málaga",
+            "superficie_m2": 255,
+            "habitaciones": 1,
+            "baños": 1,
+            "plantas": 1,
+            "precio": 680928,
+            "año_construcción": 2011,
+            "estado": "A reformar",
+            "certificación_energética": "A+",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 1 habitaciones y 1 baños. Incluye Patio, Solarium, Trastero.",
+            "imágenes": [
+                "https://ejemplo.com/imagen36_1.jpg",
+                "https://ejemplo.com/imagen36_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Patio",
+                "Piscina",
+                "Trastero"
+            ]
+        },
+        "37": {
+            "tipo": "Loft",
+            "ubicación": "C/ 3 de San Sebastián, San Sebastián",
+            "superficie_m2": 174,
+            "habitaciones": 2,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 843096,
+            "año_construcción": 2005,
+            "estado": "Reformado",
+            "certificación_energética": "B",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 2 habitaciones y 4 baños. Incluye Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen37_1.jpg",
+                "https://ejemplo.com/imagen37_2.jpg"
+            ],
+            "extras": [
+                "Terraza",
+                "Patio",
+                "Jardín"
+            ]
+        },
+        "38": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 30 de Bilbao, Bilbao",
+            "superficie_m2": 206,
+            "habitaciones": 4,
+            "baños": 3,
+            "plantas": 3,
+            "precio": 499299,
+            "año_construcción": 2005,
+            "estado": "A reformar",
+            "certificación_energética": "C",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 4 habitaciones y 3 baños. Incluye Patio, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen38_1.jpg",
+                "https://ejemplo.com/imagen38_2.jpg"
+            ],
+            "extras": [
+                "Terraza"
+            ]
+        },
+        "39": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 9 de Valencia, Valencia",
+            "superficie_m2": 262,
+            "habitaciones": 5,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 364865,
+            "año_construcción": 2022,
+            "estado": "Nuevo",
+            "certificación_energética": "D",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 5 habitaciones y 4 baños. Incluye Ascensor, Piscina, Patio, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen39_1.jpg",
+                "https://ejemplo.com/imagen39_2.jpg"
+            ],
+            "extras": [
+                "Ascensor",
+                "Jardín"
+            ]
+        },
+        "40": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 7 de Sevilla, Sevilla",
+            "superficie_m2": 151,
+            "habitaciones": 1,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 159985,
+            "año_construcción": 1990,
+            "estado": "Nuevo",
+            "certificación_energética": "A",
+            "descripción": "Impresionantes vistas panorámicas desde la terraza. Cuenta con 1 habitaciones y 3 baños. Incluye Patio, Ascensor, Jardín, Garaje.",
+            "imágenes": [
+                "https://ejemplo.com/imagen40_1.jpg",
+                "https://ejemplo.com/imagen40_2.jpg"
+            ],
+            "extras": [
+                "Jardín",
+                "Piscina"
+            ]
+        },
+        "41": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 22 de Barcelona, Barcelona",
+            "superficie_m2": 152,
+            "habitaciones": 2,
+            "baños": 3,
+            "plantas": 2,
+            "precio": 239367,
+            "año_construcción": 2013,
+            "estado": "Nuevo",
+            "certificación_energética": "A",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 2 habitaciones y 3 baños. Incluye Garaje, Patio, Piscina.",
+            "imágenes": [
+                "https://ejemplo.com/imagen41_1.jpg",
+                "https://ejemplo.com/imagen41_2.jpg"
+            ],
+            "extras": [
+                "Terraza"
+            ]
+        },
+        "42": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 39 de Granada, Granada",
+            "superficie_m2": 130,
+            "habitaciones": 4,
+            "baños": 3,
+            "plantas": 3,
+            "precio": 580566,
+            "año_construcción": 2000,
+            "estado": "Bueno",
+            "certificación_energética": "B",
+            "descripción": "Ubicada en una zona tranquila, perfecta para familias. Cuenta con 4 habitaciones y 3 baños. Incluye Ascensor, Trastero.",
+            "imágenes": [
+                "https://ejemplo.com/imagen42_1.jpg",
+                "https://ejemplo.com/imagen42_2.jpg"
+            ],
+            "extras": [
+                "Jardín",
+                "Piscina"
+            ]
+        },
+        "43": {
+            "tipo": "Ático",
+            "ubicación": "C/ 87 de Bilbao, Bilbao",
+            "superficie_m2": 51,
+            "habitaciones": 1,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 261812,
+            "año_construcción": 1983,
+            "estado": "A reformar",
+            "certificación_energética": "B",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 1 habitaciones y 3 baños. Incluye Ascensor, Trastero, Jardín, Patio.",
+            "imágenes": [
+                "https://ejemplo.com/imagen43_1.jpg",
+                "https://ejemplo.com/imagen43_2.jpg"
+            ],
+            "extras": [
+                "Jardín",
+                "Ascensor",
+                "Patio",
+                "Garaje"
+            ]
+        },
+        "44": {
+            "tipo": "Dúplex",
+            "ubicación": "C/ 49 de Barcelona, Barcelona",
+            "superficie_m2": 241,
+            "habitaciones": 3,
+            "baños": 1,
+            "plantas": 3,
+            "precio": 945772,
+            "año_construcción": 2021,
+            "estado": "A reformar",
+            "certificación_energética": "B",
+            "descripción": "Ideal para inversión, alta rentabilidad en alquiler. Cuenta con 3 habitaciones y 1 baños. Incluye Piscina, Terraza, Solarium.",
+            "imágenes": [
+                "https://ejemplo.com/imagen44_1.jpg",
+                "https://ejemplo.com/imagen44_2.jpg"
+            ],
+            "extras": [
+                "Garaje",
+                "Terraza",
+                "Solarium"
+            ]
+        },
+        "45": {
+            "tipo": "Piso",
+            "ubicación": "C/ 85 de Valencia, Valencia",
+            "superficie_m2": 200,
+            "habitaciones": 4,
+            "baños": 4,
+            "plantas": 1,
+            "precio": 112811,
+            "año_construcción": 1995,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 4 habitaciones y 4 baños. Incluye Piscina.",
+            "imágenes": [
+                "https://ejemplo.com/imagen45_1.jpg",
+                "https://ejemplo.com/imagen45_2.jpg"
+            ],
+            "extras": [
+                "Trastero",
+                "Jardín",
+                "Ascensor",
+                "Garaje"
+            ]
+        },
+        "46": {
+            "tipo": "Ático",
+            "ubicación": "C/ 10 de Madrid, Madrid",
+            "superficie_m2": 164,
+            "habitaciones": 3,
+            "baños": 3,
+            "plantas": 1,
+            "precio": 226344,
+            "año_construcción": 1991,
+            "estado": "Nuevo",
+            "certificación_energética": "C",
+            "descripción": "Espacio exterior con jardín privado y zona de barbacoa. Cuenta con 3 habitaciones y 3 baños. Incluye Ascensor, Solarium, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen46_1.jpg",
+                "https://ejemplo.com/imagen46_2.jpg"
+            ],
+            "extras": [
+                "Ascensor",
+                "Jardín"
+            ]
+        },
+        "47": {
+            "tipo": "Estudio",
+            "ubicación": "C/ 74 de Valencia, Valencia",
+            "superficie_m2": 171,
+            "habitaciones": 4,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 159519,
+            "año_construcción": 1995,
+            "estado": "Nuevo",
+            "certificación_energética": "B",
+            "descripción": "Recientemente reformada con materiales de primera. Cuenta con 4 habitaciones y 2 baños. Incluye Trastero, Ascensor, Piscina, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen47_1.jpg",
+                "https://ejemplo.com/imagen47_2.jpg"
+            ],
+            "extras": [
+                "Trastero",
+                "Garaje",
+                "Solarium"
+            ]
+        },
+        "48": {
+            "tipo": "Ático",
+            "ubicación": "C/ 56 de Madrid, Madrid",
+            "superficie_m2": 185,
+            "habitaciones": 5,
+            "baños": 2,
+            "plantas": 1,
+            "precio": 385651,
+            "año_construcción": 2001,
+            "estado": "Nuevo",
+            "certificación_energética": "A+",
+            "descripción": "Cercana a todos los servicios: supermercados, colegios y transporte público. Cuenta con 5 habitaciones y 2 baños. Incluye Garaje, Patio, Ascensor.",
+            "imágenes": [
+                "https://ejemplo.com/imagen48_1.jpg",
+                "https://ejemplo.com/imagen48_2.jpg"
+            ],
+            "extras": [
+                "Ascensor",
+                "Solarium",
+                "Patio"
+            ]
+        },
+        "49": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 74 de Málaga, Málaga",
+            "superficie_m2": 220,
+            "habitaciones": 4,
+            "baños": 2,
+            "plantas": 2,
+            "precio": 839775,
+            "año_construcción": 2018,
+            "estado": "Reformado",
+            "certificación_energética": "B",
+            "descripción": "Amplia vivienda con excelente iluminación y acabados de alta calidad. Cuenta con 4 habitaciones y 2 baños. Incluye Piscina, Terraza.",
+            "imágenes": [
+                "https://ejemplo.com/imagen49_1.jpg",
+                "https://ejemplo.com/imagen49_2.jpg"
+            ],
+            "extras": [
+                "Patio",
+                "Piscina",
+                "Solarium"
+            ]
+        },
+        "50": {
+            "tipo": "Bajo con Jardín",
+            "ubicación": "C/ 18 de Barcelona, Barcelona",
+            "superficie_m2": 71,
+            "habitaciones": 2,
+            "baños": 1,
+            "plantas": 2,
+            "precio": 617058,
+            "año_construcción": 2016,
+            "estado": "Bueno",
+            "certificación_energética": "A+",
+            "descripción": "Diseño moderno con espacios diáfanos y techos altos. Cuenta con 2 habitaciones y 1 baños. Incluye Garaje, Jardín.",
+            "imágenes": [
+                "https://ejemplo.com/imagen50_1.jpg",
+                "https://ejemplo.com/imagen50_2.jpg"
+            ],
+            "extras": [
+                "Ascensor"
+            ]
+        }
+    },
+    "usuarios": {
+        "1": {
+            "email": "usuario1@gmail.com",
+            "password": "Pass18678!"
+        },
+        "2": {
+            "email": "usuario2@gmail.com",
+            "password": "Pass22765!"
+        },
+        "3": {
+            "email": "usuario3@gmail.com",
+            "password": "Pass38055!"
+        },
+        "4": {
+            "email": "usuario4@gmail.com",
+            "password": "Pass44796!"
+        },
+        "5": {
+            "email": "usuario5@gmail.com",
+            "password": "Pass54419!"
+        },
+        "6": {
+            "email": "usuario6@gmail.com",
+            "password": "Pass67974!"
+        },
+        "7": {
+            "email": "usuario7@gmail.com",
+            "password": "Pass78758!"
+        },
+        "8": {
+            "email": "usuario8@gmail.com",
+            "password": "Pass89372!"
+        },
+        "9": {
+            "email": "usuario9@gmail.com",
+            "password": "Pass98977!"
+        },
+        "10": {
+            "email": "usuario10@gmail.com",
+            "password": "Pass107849!"
+        },
+        "11": {
+            "email": "usuario11@gmail.com",
+            "password": "Pass119539!"
+        },
+        "12": {
+            "email": "usuario12@gmail.com",
+            "password": "Pass126240!"
+        },
+        "13": {
+            "email": "usuario13@gmail.com",
+            "password": "Pass135669!"
+        },
+        "14": {
+            "email": "usuario14@gmail.com",
+            "password": "Pass141991!"
+        },
+        "15": {
+            "email": "usuario15@gmail.com",
+            "password": "Pass153038!"
+        }
+    }
+}

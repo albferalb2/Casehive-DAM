@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+¡        <ImageView
+            android:id="@+id/imageVivienda"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Imagen de la vivienda"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Vivienda"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/chatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chat"
+                android:drawableLeft="@android:drawable/ic_dialog_email"
+                android:drawablePadding="6dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/llamarButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Llamar"
+                android:drawableLeft="@android:drawable/ic_menu_call"
+                android:drawablePadding="6dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnFavorito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_off"
+            android:contentDescription="Favorito"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

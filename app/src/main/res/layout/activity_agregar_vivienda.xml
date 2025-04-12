@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de vivienda" />
+
+        <EditText
+            android:id="@+id/editUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación" />
+
+        <EditText
+            android:id="@+id/editDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción" />
+
+        <EditText
+            android:id="@+id/editHabitaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Número de habitaciones" />
+
+        <EditText
+            android:id="@+id/editBanos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Número de baños" />
+
+        <EditText
+            android:id="@+id/editSuperficie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Superficie en m²" />
+
+        <EditText
+            android:id="@+id/editPlantas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Número de plantas" />
+
+        <EditText
+            android:id="@+id/editPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Precio (€)" />
+
+        <EditText
+            android:id="@+id/editAno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Año de construcción" />
+
+        <EditText
+            android:id="@+id/editEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado (ej: Nuevo, Reformado...)" />
+
+        <EditText
+            android:id="@+id/editCertificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Certificación energética" />
+
+        <EditText
+            android:id="@+id/editExtras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Extras (separados por comas)" />
+
+        <EditText
+            android:id="@+id/editImagenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URLs de imágenes (separadas por comas)" />
+
+        <Button
+            android:id="@+id/btnGuardarVivienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar vivienda"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

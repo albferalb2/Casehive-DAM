@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "80452720977",
+    "project_id": "casehive-c1a03",
+    "storage_bucket": "casehive-c1a03.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80452720977:android:602503998def9254dedb70",
+        "android_client_info": {
+          "package_name": "com.example.casehive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWGejdcLE__AZFu_KvW9suvtHWfGwNVBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
