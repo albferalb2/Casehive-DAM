@@ -60,7 +60,7 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
                 intent.putExtra("receptorId", vivienda.creadorId)
                 context.startActivity(intent)
             }
-//chang
+
             holder.llamarButton.setOnClickListener {
                 val context = holder.itemView.context
                 val db = FirebaseDatabase.getInstance().getReference("usuarios").child(vivienda.creadorId)

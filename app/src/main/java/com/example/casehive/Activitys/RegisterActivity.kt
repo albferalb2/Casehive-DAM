@@ -37,7 +37,6 @@ class RegisterActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             val uid = auth.currentUser?.uid ?: return@addOnCompleteListener
 
-                            // Guardar también en Realtime Database
                             val userMap = mapOf("email" to email)
                             val db = FirebaseDatabase.getInstance().getReference("usuarios")
                             db.child(uid).setValue(userMap)
