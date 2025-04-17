@@ -8,9 +8,11 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.casehive.R
@@ -19,6 +21,7 @@ import com.example.casehive.models.Vivienda
 import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
+    private var isDarkMode = false
 
     private lateinit var database: DatabaseReference
     private lateinit var recyclerView: RecyclerView
@@ -92,6 +95,15 @@ class MainActivity : AppCompatActivity() {
         }
         if (checkSelfPermission(android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf(android.Manifest.permission.CALL_PHONE), 123)
+        }
+
+        val btnToggleTheme = findViewById<ImageButton>(R.id.btnToggleTheme)
+        isDarkMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+
+        btnToggleTheme.setOnClickListener {
+            isDarkMode = !isDarkMode
+            val mode = if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+            AppCompatDelegate.setDefaultNightMode(mode)
         }
 
     }

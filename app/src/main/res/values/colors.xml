@@ -1,8 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="teal_700">#018786</color>
-    <color name="purple_200">#BB86FC</color>
+    <color name="colorPrimary">#00629E</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#CFE5FF</color>
+    <color name="colorOnPrimaryContainer">#001D34</color>
+
+    <color name="colorSecondary">#535F70</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#D7E3F7</color>
+    <color name="colorOnSecondaryContainer">#101C2B</color>
+
+    <color name="colorBackground">#FAFCFF</color>
+    <color name="colorOnBackground">#1B1B1F</color>
+
+    <color name="colorSurface">#FAFCFF</color>
+    <color name="colorOnSurface">#1B1B1F</color>
+
+    <color name="colorError">#BA1A1A</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="bottom_nav_bg">#FFFFFF</color> <!-- para modo claro -->
 
 </resources>
