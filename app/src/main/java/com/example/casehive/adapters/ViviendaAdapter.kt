@@ -46,7 +46,16 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
         holder.tipo.text = vivienda.tipo
         holder.ubicacion.text = vivienda.ubicación
         holder.precio.text = "€ ${vivienda.precio}"
-        Glide.with(context).load(vivienda.imágenes.firstOrNull()).into(holder.image)
+
+        val imagenesFiltradas = when (vivienda.imágenes) {
+            is List<*> -> vivienda.imágenes.filterIsInstance<String>()
+            is Map<*, *> -> vivienda.imágenes.values.filterIsInstance<String>()
+            else -> emptyList()
+        }
+
+        Glide.with(context)
+            .load(imagenesFiltradas.firstOrNull() ?: R.drawable.placeholder_image)
+            .into(holder.image)
 
         if (vivienda.creadorId == currentUserId) {
             holder.chatButton.visibility = View.GONE
@@ -62,9 +71,7 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
             }
 
             holder.llamarButton.setOnClickListener {
-                val context = holder.itemView.context
                 val db = FirebaseDatabase.getInstance().getReference("usuarios").child(vivienda.creadorId)
-
                 db.child("telefono").addListenerForSingleValueEvent(object : ValueEventListener {
                     @RequiresApi(Build.VERSION_CODES.M)
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -74,7 +81,7 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
                                 data = Uri.parse("tel:$telefono")
                             }
 
-                             if (context.checkSelfPermission(android.Manifest.permission.CALL_PHONE) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                            if (context.checkSelfPermission(android.Manifest.permission.CALL_PHONE) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
                                 context.startActivity(intent)
                             } else {
                                 Toast.makeText(context, "Permiso CALL_PHONE no concedido", Toast.LENGTH_SHORT).show()
@@ -89,21 +96,29 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
             }
         }
 
+        // Manejo defensivo de extras
+        val extrasFiltrados = when (vivienda.extras) {
+            is List<*> -> vivienda.extras.filterIsInstance<String>()
+            is Map<*, *> -> vivienda.extras.values.filterIsInstance<String>()
+            else -> emptyList()
+        }
+
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, DetalleViviendaActivity::class.java)
-            intent.putExtra("tipo", vivienda.tipo)
-            intent.putExtra("ubicacion", vivienda.ubicación)
-            intent.putExtra("descripcion", vivienda.descripción)
-            intent.putExtra("habitaciones", vivienda.habitaciones)
-            intent.putExtra("baños", vivienda.baños)
-            intent.putExtra("superficie", vivienda.superficie_m2)
-            intent.putExtra("plantas", vivienda.plantas)
-            intent.putExtra("precio", vivienda.precio)
-            intent.putExtra("año_construccion", vivienda.año_construcción)
-            intent.putExtra("estado", vivienda.estado)
-            intent.putExtra("certificacion", vivienda.certificación_energética)
-            intent.putExtra("extras", ArrayList(vivienda.extras))
-            intent.putExtra("imagenes", ArrayList(vivienda.imágenes)) // 🔥 IMPORTANTE
+            val intent = Intent(context, DetalleViviendaActivity::class.java).apply {
+                putExtra("tipo", vivienda.tipo)
+                putExtra("ubicacion", vivienda.ubicación)
+                putExtra("descripcion", vivienda.descripción)
+                putExtra("habitaciones", vivienda.habitaciones)
+                putExtra("baños", vivienda.baños)
+                putExtra("superficie", vivienda.superficie_m2)
+                putExtra("plantas", vivienda.plantas)
+                putExtra("precio", vivienda.precio)
+                putExtra("año_construccion", vivienda.año_construcción)
+                putExtra("estado", vivienda.estado)
+                putExtra("certificacion", vivienda.certificación_energética)
+                putExtra("extras", ArrayList(extrasFiltrados))
+                putExtra("imagenes", ArrayList(imagenesFiltradas))
+            }
             context.startActivity(intent)
         }
 

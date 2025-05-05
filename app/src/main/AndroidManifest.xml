@@ -29,7 +29,7 @@
 
         <!-- LoginActivity como entrada principal -->
         <activity
-            android:name=".Activitys.LoginActivity"
+            android:name=".Activitys.users.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
 
         <!-- RegisterActivity -->
         <activity
-            android:name=".Activitys.RegisterActivity"
+            android:name=".Activitys.users.RegisterActivity"
             android:exported="false" />
         <activity android:name=".Activitys.FavoritosActivity" />
         <activity android:name=".Activitys.ChatActivity" />
@@ -52,6 +52,8 @@
             android:name=".Activitys.MainActivity"
             android:exported="false" />
         <activity android:name=".Activitys.DetalleViviendaActivity" />
+        <activity android:name=".Activitys.MisViviendasActivity" />
+        <activity android:name=".Activitys.EditarViviendaActivity" />
 
     </application>
 

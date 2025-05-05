@@ -34,15 +34,14 @@ class FavoritosActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().reference
 
         cargarFavoritos()
+
         findViewById<Button>(R.id.btnViviendas).setOnClickListener {
             finish()
         }
 
         findViewById<Button>(R.id.btnVerChats).setOnClickListener {
-           startActivity(Intent(this, MisChatsActivity::class.java))
-                 }
-
-
+            startActivity(Intent(this, MisChatsActivity::class.java))
+        }
     }
 
     private fun cargarFavoritos() {
@@ -63,8 +62,35 @@ class FavoritosActivity : AppCompatActivity() {
                 viviendasRef.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         for (viviendaSnap in dataSnapshot.children) {
-                            val vivienda = viviendaSnap.getValue(Vivienda::class.java)
-                            if (vivienda != null && viviendaSnap.key in viviendaIds) {
+                            val viviendaMap = viviendaSnap.value as? Map<*, *> ?: continue
+
+                            val vivienda = Vivienda(
+                                tipo = viviendaMap["tipo"] as? String ?: "",
+                                ubicación = viviendaMap["ubicación"] as? String ?: "",
+                                descripción = viviendaMap["descripción"] as? String ?: "",
+                                habitaciones = (viviendaMap["habitaciones"] as? Long)?.toInt() ?: 0,
+                                baños = (viviendaMap["baños"] as? Long)?.toInt() ?: 0,
+                                superficie_m2 = (viviendaMap["superficie_m2"] as? Long)?.toInt() ?: 0,
+                                plantas = (viviendaMap["plantas"] as? Long)?.toInt() ?: 1,
+                                precio = (viviendaMap["precio"] as? Long)?.toInt() ?: 0,
+                                año_construcción = (viviendaMap["año_construcción"] as? Long)?.toInt() ?: 0,
+                                estado = viviendaMap["estado"] as? String ?: "",
+                                certificación_energética = viviendaMap["certificación_energética"] as? String ?: "",
+                                extras = when (val raw = viviendaMap["extras"]) {
+                                    is List<*> -> raw.filterIsInstance<String>()
+                                    is Map<*, *> -> raw.values.filterIsInstance<String>()
+                                    else -> emptyList()
+                                },
+                                imágenes = when (val raw = viviendaMap["imágenes"]) {
+                                    is List<*> -> raw.filterIsInstance<String>()
+                                    is Map<*, *> -> raw.values.filterIsInstance<String>()
+                                    else -> emptyList()
+                                },
+                                creadorId = viviendaMap["creadorId"] as? String ?: "",
+                                id = viviendaSnap.key ?: ""
+                            )
+
+                            if (vivienda.id in viviendaIds) {
                                 listaFavoritos.add(vivienda)
                             }
                         }

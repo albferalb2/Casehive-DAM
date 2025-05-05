@@ -76,7 +76,11 @@ class MainActivity : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance().reference
         cargarViviendas()
-
+        val btnMisViviendas = findViewById<Button>(R.id.btnMisViviendas)
+        btnMisViviendas.setOnClickListener {
+            val intent = Intent(this, MisViviendasActivity::class.java)
+            startActivity(intent)
+        }
         val btnFavoritos = findViewById<Button>(R.id.btnFavoritos)
         btnFavoritos.setOnClickListener {
             startActivity(Intent(this, FavoritosActivity::class.java))
@@ -106,6 +110,9 @@ class MainActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(mode)
         }
 
+
+
+
     }
 
     private fun cargarViviendas() {
@@ -114,8 +121,38 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 listaViviendas.clear()
                 for (item in snapshot.children) {
-                    val vivienda = item.getValue(Vivienda::class.java)
-                    vivienda?.let { listaViviendas.add(it) }
+                    try {
+                        val viviendaMap = item.value as Map<*, *>
+
+                        val vivienda = Vivienda(
+                            tipo = viviendaMap["tipo"] as? String ?: "",
+                            ubicación = viviendaMap["ubicación"] as? String ?: "",
+                            descripción = viviendaMap["descripción"] as? String ?: "",
+                            habitaciones = (viviendaMap["habitaciones"] as? Long)?.toInt() ?: 0,
+                            baños = (viviendaMap["baños"] as? Long)?.toInt() ?: 0,
+                            superficie_m2 = (viviendaMap["superficie_m2"] as? Long)?.toInt() ?: 0,
+                            plantas = (viviendaMap["plantas"] as? Long)?.toInt() ?: 1,
+                            precio = (viviendaMap["precio"] as? Long)?.toInt() ?: 0,
+                            año_construcción = (viviendaMap["año_construcción"] as? Long)?.toInt() ?: 0,
+                            estado = viviendaMap["estado"] as? String ?: "",
+                            certificación_energética = viviendaMap["certificación_energética"] as? String ?: "",
+                            extras = when (val raw = viviendaMap["extras"]) {
+                                is List<*> -> raw.filterIsInstance<String>()
+                                is Map<*, *> -> raw.values.filterIsInstance<String>()
+                                else -> emptyList()
+                            },
+                            imágenes = when (val raw = viviendaMap["imágenes"]) {
+                                is List<*> -> raw.filterIsInstance<String>()
+                                is Map<*, *> -> raw.values.filterIsInstance<String>()
+                                else -> emptyList()
+                            },
+                            creadorId = viviendaMap["creadorId"] as? String ?: ""
+                        )
+
+                        listaViviendas.add(vivienda)
+                    } catch (e: Exception) {
+                        Log.e("Firebase", "Error al deserializar vivienda: ${e.message}")
+                    }
                 }
                 adapter.notifyDataSetChanged()
             }
@@ -125,6 +162,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 123 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {

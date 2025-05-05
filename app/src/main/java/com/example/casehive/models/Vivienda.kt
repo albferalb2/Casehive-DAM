@@ -1,6 +1,7 @@
 package com.example.casehive.models
 
 data class Vivienda(
+    var id: String = "", // ✅ Añadido para manejar identificadores únicos desde Firebase
     val tipo: String = "",
     val ubicación: String = "",
     val superficie_m2: Int = 0,
@@ -16,3 +17,5 @@ data class Vivienda(
     val extras: List<String> = emptyList(),
     val creadorId: String = ""
 )
+
+

@@ -114,6 +114,14 @@
                 android:icon="@android:drawable/ic_dialog_email"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnMisViviendas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 Mis viviendas"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
