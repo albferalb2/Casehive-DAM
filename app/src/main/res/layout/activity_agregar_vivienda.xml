@@ -11,9 +11,9 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Tipo de vivienda"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tipo de vivienda">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTipo"
                 android:layout_width="match_parent"
@@ -21,9 +21,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Ubicación"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ubicación">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etUbicacion"
                 android:layout_width="match_parent"
@@ -31,9 +31,19 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Descripción"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Superficie (m²)">
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Superficie (m²)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etSuperficie"
                 android:inputType="number"
@@ -42,9 +52,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Habitaciones"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Habitaciones">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etHabitaciones"
                 android:inputType="number"
@@ -53,9 +63,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Baños"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Baños">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etBanos"
                 android:inputType="number"
@@ -64,9 +74,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Plantas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Plantas">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPlantas"
                 android:inputType="number"
@@ -75,9 +85,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Precio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPrecio"
                 android:inputType="number"
@@ -86,9 +96,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Año construcción"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Año construcción">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etAnoConstruccion"
                 android:inputType="number"
@@ -97,9 +107,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Estado"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Estado">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEstado"
                 android:layout_width="match_parent"
@@ -107,9 +117,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Certificación energética"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Certificación energética">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCertificacion"
                 android:layout_width="match_parent"
@@ -117,11 +127,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:hint="Extras (separados por comas)"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripción">
+            android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etDescripcion"
+                android:id="@+id/etExtras"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -130,7 +140,8 @@
             android:id="@+id/btnSeleccionarImagenes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Seleccionar imágenes" />
+            android:text="Seleccionar imágenes"
+            android:layout_marginTop="16dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerImagenes"
@@ -146,7 +157,6 @@
             android:layout_height="wrap_content"
             android:text="Guardar vivienda"
             android:layout_marginTop="24dp"/>
-
 
     </LinearLayout>
 </ScrollView>
