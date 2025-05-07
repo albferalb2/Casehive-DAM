@@ -1,77 +1,105 @@
 package com.example.casehive.Activitys
 
 import android.os.Bundle
-import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.casehive.R
-import com.example.casehive.models.Vivienda
-import com.google.firebase.database.FirebaseDatabase
+import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.database.*
 
 class EditarViviendaActivity : AppCompatActivity() {
 
     private lateinit var viviendaId: String
-    private val database = FirebaseDatabase.getInstance().getReference("viviendas")
+    private lateinit var dbRef: DatabaseReference
+
+    private lateinit var etTipo: TextInputEditText
+    private lateinit var etUbicacion: TextInputEditText
+    private lateinit var etSuperficie: TextInputEditText
+    private lateinit var etHabitaciones: TextInputEditText
+    private lateinit var etBanos: TextInputEditText
+    private lateinit var etPlantas: TextInputEditText
+    private lateinit var etPrecio: TextInputEditText
+    private lateinit var etAnoConstruccion: TextInputEditText
+    private lateinit var etEstado: TextInputEditText
+    private lateinit var etCertificacion: TextInputEditText
+    private lateinit var etExtras: TextInputEditText
+    private lateinit var etDescripcion: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_vivienda)
 
-        val tipo = findViewById<EditText>(R.id.editTipo)
-        val ubicacion = findViewById<EditText>(R.id.editUbicacion)
-        val descripcion = findViewById<EditText>(R.id.editDescripcion)
-        val habitaciones = findViewById<EditText>(R.id.editHabitaciones)
-        val baños = findViewById<EditText>(R.id.editBanos)
-        val superficie = findViewById<EditText>(R.id.editSuperficie)
-        val plantas = findViewById<EditText>(R.id.editPlantas)
-        val precio = findViewById<EditText>(R.id.editPrecio)
-        val año = findViewById<EditText>(R.id.editAno)
-        val estado = findViewById<EditText>(R.id.editEstado)
-        val certificacion = findViewById<EditText>(R.id.editCertificacion)
-        val extras = findViewById<EditText>(R.id.editExtras)
-        val btnGuardar = findViewById<Button>(R.id.btnGuardarVivienda)
+        viviendaId = intent.getStringExtra("viviendaId") ?: return finish()
+        dbRef = FirebaseDatabase.getInstance().getReference("viviendas").child(viviendaId)
 
-        val vivienda = intent.getSerializableExtra("vivienda") as? Vivienda
-        viviendaId = intent.getStringExtra("viviendaId") ?: return
+        etTipo = findViewById(R.id.etTipo)
+        etUbicacion = findViewById(R.id.etUbicacion)
+        etSuperficie = findViewById(R.id.etSuperficie)
+        etHabitaciones = findViewById(R.id.etHabitaciones)
+        etBanos = findViewById(R.id.etBanos)
+        etPlantas = findViewById(R.id.etPlantas)
+        etPrecio = findViewById(R.id.etPrecio)
+        etAnoConstruccion = findViewById(R.id.etAnoConstruccion)
+        etEstado = findViewById(R.id.etEstado)
+        etCertificacion = findViewById(R.id.etCertificacion)
+        etExtras = findViewById(R.id.etExtras)
+        etDescripcion = findViewById(R.id.etDescripcion)
 
-        vivienda?.let {
-            tipo.setText(it.tipo)
-            ubicacion.setText(it.ubicación)
-            descripcion.setText(it.descripción)
-            habitaciones.setText(it.habitaciones.toString())
-            baños.setText(it.baños.toString())
-            superficie.setText(it.superficie_m2.toString())
-            plantas.setText(it.plantas.toString())
-            precio.setText(it.precio.toString())
-            año.setText(it.año_construcción.toString())
-            estado.setText(it.estado)
-            certificacion.setText(it.certificación_energética)
-            extras.setText(it.extras.joinToString(", "))
+        cargarDatos()
+
+        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnGuardarVivienda).setOnClickListener {
+            guardarCambios()
         }
+    }
 
-        btnGuardar.setOnClickListener {
-            val viviendaActualizada = vivienda?.copy(
-                tipo = tipo.text.toString(),
-                ubicación = ubicacion.text.toString(),
-                descripción = descripcion.text.toString(),
-                habitaciones = habitaciones.text.toString().toIntOrNull() ?: 0,
-                baños = baños.text.toString().toIntOrNull() ?: 0,
-                superficie_m2 = superficie.text.toString().toIntOrNull() ?: 0,
-                plantas = plantas.text.toString().toIntOrNull() ?: 1,
-                precio = precio.text.toString().toIntOrNull() ?: 0,
-                año_construcción = año.text.toString().toIntOrNull() ?: 2020,
-                estado = estado.text.toString(),
-                certificación_energética = certificacion.text.toString(),
-                extras = extras.text.toString().split(",").map { it.trim() }
-            )
+    private fun cargarDatos() {
+        dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                etTipo.setText(snapshot.child("tipo").getValue(String::class.java))
+                etUbicacion.setText(snapshot.child("ubicación").getValue(String::class.java))
+                etSuperficie.setText(snapshot.child("superficie_m2").getValue(Long::class.java)?.toString() ?: "")
+                etHabitaciones.setText(snapshot.child("habitaciones").getValue(Long::class.java)?.toString() ?: "")
+                etBanos.setText(snapshot.child("baños").getValue(Long::class.java)?.toString() ?: "")
+                etPlantas.setText(snapshot.child("plantas").getValue(Long::class.java)?.toString() ?: "")
+                etPrecio.setText(snapshot.child("precio").getValue(Long::class.java)?.toString() ?: "")
+                etAnoConstruccion.setText(snapshot.child("año_construcción").getValue(Long::class.java)?.toString() ?: "")
+                etEstado.setText(snapshot.child("estado").getValue(String::class.java))
+                etCertificacion.setText(snapshot.child("certificación_energética").getValue(String::class.java))
+                etDescripcion.setText(snapshot.child("descripción").getValue(String::class.java))
 
-            viviendaActualizada?.let { actualizada ->
-                database.child(viviendaId).setValue(actualizada).addOnSuccessListener {
-                    Toast.makeText(this, "Vivienda actualizada", Toast.LENGTH_SHORT).show()
-                    finish()
-                }.addOnFailureListener {
-                    Toast.makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
-                }
+                val extrasList = snapshot.child("extras").children.mapNotNull { it.getValue(String::class.java) }
+                etExtras.setText(extrasList.joinToString(", "))
             }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@EditarViviendaActivity, "Error al cargar datos", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    private fun guardarCambios() {
+        val cambios = mutableMapOf<String, Any>()
+
+        cambios["tipo"] = etTipo.text.toString().trim()
+        cambios["ubicación"] = etUbicacion.text.toString().trim()
+        cambios["superficie_m2"] = etSuperficie.text.toString().toIntOrNull() ?: 0
+        cambios["habitaciones"] = etHabitaciones.text.toString().toIntOrNull() ?: 0
+        cambios["baños"] = etBanos.text.toString().toIntOrNull() ?: 0
+        cambios["plantas"] = etPlantas.text.toString().toIntOrNull() ?: 0
+        cambios["precio"] = etPrecio.text.toString().toIntOrNull() ?: 0
+        cambios["año_construcción"] = etAnoConstruccion.text.toString().toIntOrNull() ?: 0
+        cambios["estado"] = etEstado.text.toString().trim()
+        cambios["certificación_energética"] = etCertificacion.text.toString().trim()
+        cambios["descripción"] = etDescripcion.text.toString().trim()
+
+        val extrasTexto = etExtras.text.toString().trim()
+        cambios["extras"] = if (extrasTexto.isNotEmpty()) extrasTexto.split(",").map { it.trim() } else emptyList<String>()
+
+        dbRef.updateChildren(cambios).addOnSuccessListener {
+            Toast.makeText(this, "Cambios guardados", Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
         }
     }
 }
