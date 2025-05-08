@@ -1,3 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CaseHive</string>
+    <string name="tipo_vivienda">Tipo de vivienda</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="superficie">Superficie (m²)</string>
+    <string name="habitaciones">Habitaciones</string>
+    <string name="banos">Baños</string>
+    <string name="plantas">Plantas</string>
+    <string name="precio">Precio</string>
+    <string name="ano_construccion">Año construcción</string>
+    <string name="estado">Estado</string>
+    <string name="certificacion">Certificación energética</string>
+    <string name="descripcion">Descripción</string>
+    <string name="extras">Extras</string>
+    <string name="seleccionar_imagenes">Seleccionar imágenes</string>
+    <string name="guardar_vivienda">Guardar vivienda</string>
+    <string name="casas">Casas</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="mis_chats">Mis chats</string>
+    <string name="buscar">Buscar</string>
+    <string name="buscar_hint">Buscar...</string>
+    <string name="agregar_vivienda">➕ Añadir vivienda</string>
+    <string name="cambiar_tema">Cambiar tema</string>
+    <string name="vivienda_guardada">Vivienda guardada</string>
+    <string name="error_guardar">Error al guardar</string>
+    <string name="imagen_no_disponible">Imagen no disponible</string>
+    <string name="chat">Chatear con el vendedor</string>
+    <string name="llamar">Llamar</string>
+    <string name="telefono_no_disponible">Teléfono no disponible</string>
+    <string name="permiso_no_concedido">Permiso CALL_PHONE no concedido</string>
 </resources>
