@@ -1,13 +1,17 @@
 # proyec
  
 🏠 CaseHive
+
 CaseHive is a modern Android application built with Kotlin and powered by Firebase, designed to streamline the process of buying, selling, and managing properties in a simple, intuitive, and mobile-friendly interface.
 
 ✨ Features
+
 🔐 User Authentication
+
 Secure registration and login using Firebase Authentication.
 
 🏡 Property Listings
+
 Browse a dynamic list of homes with filters for:
 
 Type (Apartment, Villa, etc.)
@@ -23,18 +27,23 @@ Users can upload homes with detailed data and multiple gallery images (selected 
 Listings can be edited or deleted by their creators.
 
 ⭐ Favorites System
+
 Save and manage your favorite properties for quick access.
 
 💬 Real-time Chat
+
 Start a conversation with the property seller using the integrated chat system.
 
 🌙 Light & Dark Mode
+
 Toggle between light and dark themes using a simple button.
 
 🌍 Multi-language Support
+
 Select your preferred language (English or Spanish) directly from the login screen.
 
 🛠️ Technologies Used
+
 Kotlin (Android SDK)
 
 Firebase (Authentication, Realtime Database, Storage)
