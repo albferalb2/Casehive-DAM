@@ -53,3 +53,6 @@ Material Design 3
 Glide (Image loading)
 
 RecyclerView, ViewModels, LiveData (Architecture Components)
+
+🚀 Getting Started
+Clone the repository and open the project in Android Studio:
