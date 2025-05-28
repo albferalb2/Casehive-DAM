@@ -54,4 +54,11 @@ Glide (Image loading)
 
 RecyclerView, ViewModels, LiveData (Architecture Components)
 
+<<<<<<< HEAD
 
+=======
+🚀 Getting Started
+Clone the repository and open the project in Android Studio:
+
+git clone https://github.com/albferalb2/Casehive-DAM.git
+>>>>>>> e9eef85d12f1b80703a2b5b3044d0b9999e81cf1
