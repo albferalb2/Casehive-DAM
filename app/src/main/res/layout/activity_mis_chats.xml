@@ -1,45 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tituloChats"
         android:text="Mis conversaciones"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMisChats"
+        android:layout_below="@id/tituloChats"
+        android:layout_above="@id/contenedorBotones"
         android:layout_width="match_parent"
-        android:layout_height="705dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
     <LinearLayout
-
         android:id="@+id/contenedorBotones"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:padding="8dp"
+        android:padding="0dp"
         android:gravity="center">
 
         <Button
             android:id="@+id/btnViviendas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="🏠 Casas"
+            android:text="🏠"
             android:backgroundTint="@android:color/holo_orange_light"
             android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btnFavoritos"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="⭐"
@@ -48,12 +50,21 @@
 
         <Button
             android:id="@+id/btnVerChats"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:text="💬"
             android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnMisViviendas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👤"
+            android:backgroundTint="@android:color/holo_red_light"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

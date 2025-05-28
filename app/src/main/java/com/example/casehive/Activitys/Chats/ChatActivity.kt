@@ -1,4 +1,4 @@
-package com.example.casehive.Activitys
+package com.example.casehive.Activitys.Chats
 
 import android.os.Bundle
 import android.widget.Button

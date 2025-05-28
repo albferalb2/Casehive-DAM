@@ -1,4 +1,4 @@
-package com.example.casehive.Activitys
+package com.example.casehive.Activitys.Viviendas
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.casehive.Activitys.Chats.MisChatsActivity
+import com.example.casehive.Activitys.MainActivity
 import com.example.casehive.R
 import com.example.casehive.adapters.ViviendaAdapter
 import com.example.casehive.models.Vivienda
@@ -20,7 +22,6 @@ class FavoritosActivity : AppCompatActivity() {
     private val listaFavoritos = mutableListOf<Vivienda>()
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favoritos)
@@ -36,11 +37,17 @@ class FavoritosActivity : AppCompatActivity() {
         cargarFavoritos()
 
         findViewById<Button>(R.id.btnViviendas).setOnClickListener {
-            finish()
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnVerChats).setOnClickListener {
             startActivity(Intent(this, MisChatsActivity::class.java))
+        }
+        findViewById<Button>(R.id.btnMisViviendas).setOnClickListener {
+            startActivity(Intent(this, MisViviendasActivity::class.java))
+        }
+        findViewById<Button>(R.id.btnFavoritos).setOnClickListener {
+            startActivity(Intent(this, FavoritosActivity::class.java))
         }
     }
 

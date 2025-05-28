@@ -1,6 +1,5 @@
 package com.example.casehive.adapters
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -11,8 +10,8 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.casehive.Activitys.ChatActivity
-import com.example.casehive.Activitys.DetalleViviendaActivity
+import com.example.casehive.Activitys.Chats.ChatActivity
+import com.example.casehive.Activitys.Viviendas.Detalles.DetalleViviendaActivity
 import com.example.casehive.R
 import com.example.casehive.models.Vivienda
 import com.google.firebase.auth.FirebaseAuth

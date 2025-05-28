@@ -20,9 +20,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/casehive"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/casehive"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaseHive"
         tools:targetApi="31">
@@ -41,19 +41,19 @@
         <activity
             android:name=".Activitys.users.RegisterActivity"
             android:exported="false" />
-        <activity android:name=".Activitys.FavoritosActivity" />
-        <activity android:name=".Activitys.ChatActivity" />
-        <activity android:name=".Activitys.AgregarViviendaActivity" />
-        <activity android:name=".Activitys.MisChatsActivity" />
+        <activity android:name=".Activitys.Viviendas.FavoritosActivity" />
+        <activity android:name=".Activitys.Chats.ChatActivity" />
+        <activity android:name=".Activitys.Viviendas.Editar_Agregar.AgregarViviendaActivity" />
+        <activity android:name=".Activitys.Chats.MisChatsActivity" />
 
 
         <!-- MainActivity (pantalla principal una vez logueado) -->
         <activity
             android:name=".Activitys.MainActivity"
             android:exported="false" />
-        <activity android:name=".Activitys.DetalleViviendaActivity" />
-        <activity android:name=".Activitys.MisViviendasActivity" />
-        <activity android:name=".Activitys.EditarViviendaActivity" />
+        <activity android:name=".Activitys.Viviendas.Detalles.DetalleViviendaActivity" />
+        <activity android:name=".Activitys.Viviendas.MisViviendasActivity" />
+        <activity android:name=".Activitys.Viviendas.Editar_Agregar.EditarViviendaActivity" />
 
     </application>
 

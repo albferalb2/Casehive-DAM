@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CaseHive</string>
+    <string name="tipo_vivienda">Type of housing</string>
+    <string name="ubicacion">Location</string>
+    <string name="superficie">Surface (m²)</string>
+    <string name="habitaciones">Rooms</string>
+    <string name="banos">Bathrooms</string>
+    <string name="plantas">Floors</string>
+    <string name="precio">Price</string>
+    <string name="ano_construccion">Year of construction</string>
+    <string name="estado">State</string>
+    <string name="certificacion">Energy certification</string>
+    <string name="descripcion">Description</string>
+    <string name="extras">Extras</string>
+    <string name="seleccionar_imagenes">Selec images</string>
+    <string name="guardar_vivienda">Save housing</string>
+    <string name="casas">Houses</string>
+    <string name="favoritos">Favorite</string>
+    <string name="mis_chats">My chats</string>
+    <string name="buscar">Looking for</string>
+    <string name="buscar_hint">Looking for...</string>
+    <string name="agregar_vivienda">➕ Add home</string>
+    <string name="cambiar_tema">Change theme</string>
+    <string name="vivienda_guardada">Saved Housing</string>
+    <string name="error_guardar">Error with saving</string>
+    <string name="imagen_no_disponible">Image not available</string>
+    <string name="chat">Chat with the seller</string>
+    <string name="llamar">Call</string>
+    <string name="telefono_no_disponible">Phone not available</string>
+    <string name="permiso_no_concedido">CALL_PHONE permission not granted</string>
+</resources>

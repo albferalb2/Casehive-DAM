@@ -63,17 +63,7 @@
 
         >
 
-        <Button
-            android:id="@+id/btnAgregarVivienda"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/contenedorBotones"
-            android:layout_marginBottom="-5dp"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:text="➕ Añadir vivienda"
-            android:textColor="@android:color/white"
 
-            />
 
         <LinearLayout
             android:id="@+id/contenedorBotones"
@@ -86,13 +76,22 @@
             android:background="@color/bottom_nav_bg"
             >
 
+            <Button
+                android:id="@+id/btnAgregarVivienda"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:text="➕"
+                android:textColor="@android:color/white"
 
+                />
             <Button
                 android:id="@+id/btnViviendas"
                 android:layout_width="3dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="🏠 Casas"
+                android:layout_weight="3"
+                android:text="🏠"
                 android:backgroundTint="@android:color/holo_orange_light"
                 android:textColor="@android:color/white" />
 
@@ -100,7 +99,7 @@
                 android:id="@+id/btnFavoritos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:text="⭐"
                 android:backgroundTint="@android:color/holo_blue_light"
                 android:textColor="@android:color/white" />
@@ -109,17 +108,18 @@
                 android:id="@+id/btnVerChats"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Mis chats"
+                android:layout_weight="3"
+                android:text="💬"
                 android:icon="@android:drawable/ic_dialog_email"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:textColor="@android:color/white" />
 
             <Button
                 android:id="@+id/btnMisViviendas"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="📝 Mis viviendas"
+                android:layout_weight="3"
+                android:text="👤"
                 android:backgroundTint="@android:color/holo_red_light"
                 android:textColor="@android:color/white" />
         </LinearLayout>

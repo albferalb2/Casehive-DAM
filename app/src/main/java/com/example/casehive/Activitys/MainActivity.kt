@@ -15,6 +15,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.casehive.Activitys.Chats.MisChatsActivity
+import com.example.casehive.Activitys.Viviendas.Editar_Agregar.AgregarViviendaActivity
+import com.example.casehive.Activitys.Viviendas.FavoritosActivity
+import com.example.casehive.Activitys.Viviendas.MisViviendasActivity
 import com.example.casehive.R
 import com.example.casehive.adapters.ViviendaAdapter
 import com.example.casehive.models.Vivienda

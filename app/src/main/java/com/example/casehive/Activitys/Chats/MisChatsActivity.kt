@@ -1,4 +1,4 @@
-package com.example.casehive.Activitys
+package com.example.casehive.Activitys.Chats
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.casehive.Activitys.MainActivity
+import com.example.casehive.Activitys.Viviendas.FavoritosActivity
+import com.example.casehive.Activitys.Viviendas.MisViviendasActivity
 import com.example.casehive.R
 import com.example.casehive.adapters.MisChatsAdapter
 import com.google.firebase.auth.FirebaseAuth
@@ -40,7 +43,7 @@ class MisChatsActivity : AppCompatActivity() {
         cargarConversaciones()
 
         findViewById<Button>(R.id.btnViviendas).setOnClickListener {
-            finish()
+           startActivity(Intent(this, MainActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnFavoritos).setOnClickListener {
@@ -49,6 +52,9 @@ class MisChatsActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnVerChats).setOnClickListener {
             startActivity(Intent(this, MisChatsActivity::class.java))
+        }
+        findViewById<Button>(R.id.btnMisViviendas).setOnClickListener {
+            startActivity(Intent(this, MisViviendasActivity::class.java))
         }
     }
 

@@ -1,11 +1,15 @@
-package com.example.casehive.Activitys
+package com.example.casehive.Activitys.Viviendas
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.casehive.Activitys.Chats.MisChatsActivity
+import com.example.casehive.Activitys.MainActivity
+import com.example.casehive.Activitys.Viviendas.Editar_Agregar.EditarViviendaActivity
 import com.example.casehive.R
 import com.example.casehive.adapters.MisViviendasAdapter
 import com.example.casehive.models.Vivienda
@@ -19,7 +23,10 @@ class MisViviendasActivity : AppCompatActivity() {
     private val listaViviendas = mutableListOf<Vivienda>()
     private lateinit var dbRef: DatabaseReference
     private val userId by lazy { FirebaseAuth.getInstance().currentUser?.uid.orEmpty() }
-
+    private lateinit var  btnfavo: Button
+    private lateinit var btnmain:Button
+    private lateinit var btnchats:Button
+    private lateinit var btnmisviv:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mis_viviendas)
@@ -43,7 +50,22 @@ class MisViviendasActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         dbRef = FirebaseDatabase.getInstance().getReference("viviendas")
-
+        btnfavo = findViewById(R.id.btnFavoritos)
+        btnfavo.setOnClickListener {
+            startActivity(Intent(this, FavoritosActivity::class.java))
+        }
+        btnmain=findViewById(R.id.btnViviendas)
+        btnmain.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        btnchats=findViewById(R.id.btnVerChats)
+        btnchats.setOnClickListener {
+            startActivity(Intent(this, MisChatsActivity::class.java))
+        }
+        btnmisviv=findViewById(R.id.btnMisViviendas)
+        btnmisviv.setOnClickListener {
+            startActivity(Intent(this, MisViviendasActivity::class.java))
+        }
         cargarMisViviendas()
     }
 

@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.casehive.Activitys.MainActivity
 import com.example.casehive.R
 import com.google.firebase.auth.FirebaseAuth
+import java.util.Locale
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,7 +19,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordEdit: EditText
     private lateinit var loginBtn: Button
     private lateinit var registerBtn: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -55,5 +56,16 @@ class LoginActivity : AppCompatActivity() {
         registerBtn.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+    }
+
+    private fun setLocale(language:String){
+        val local= Locale(language)
+        Locale.setDefault(local)
+        val config=resources.configuration
+        config.setLocale(local)
+        createConfigurationContext(config)
+        resources.updateConfiguration(config,resources.displayMetrics)
+        recreate()
+
     }
 }

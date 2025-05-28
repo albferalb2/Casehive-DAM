@@ -1,4 +1,4 @@
-package com.example.casehive.Activitys
+package com.example.casehive.Activitys.Viviendas.Detalles
 
 import android.content.Intent
 import android.net.Uri
