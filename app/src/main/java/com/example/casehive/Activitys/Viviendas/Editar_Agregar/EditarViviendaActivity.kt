@@ -63,7 +63,7 @@ class EditarViviendaActivity : AppCompatActivity() {
                 etPlantas.setText(snapshot.child("plantas").getValue(Long::class.java)?.toString() ?: "")
                 etPrecio.setText(snapshot.child("precio").getValue(Long::class.java)?.toString() ?: "")
                 etAnoConstruccion.setText(snapshot.child("año_construcción").getValue(Long::class.java)?.toString() ?: "")
-                etEstado.setText(snapshot.child("estado").getValue(String::class.java))
+                etEstado.setText(snapshot.child("esdo").getValue(String::class.java))
                 etCertificacion.setText(snapshot.child("certificación_energética").getValue(String::class.java))
                 etDescripcion.setText(snapshot.child("descripción").getValue(String::class.java))
 
