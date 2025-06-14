@@ -10,11 +10,10 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="TU_API_KEY_AQUÍ" />
 
     <application
         android:allowBackup="true"
@@ -46,7 +45,9 @@
         <activity android:name=".Activitys.Viviendas.Editar_Agregar.AgregarViviendaActivity" />
         <activity android:name=".Activitys.Chats.MisChatsActivity" />
 
-
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCJsCE8eOOQ4n8lweqkxxQsZnVh5HfsTh8" />
         <!-- MainActivity (pantalla principal una vez logueado) -->
         <activity
             android:name=".Activitys.MainActivity"
@@ -54,6 +55,7 @@
         <activity android:name=".Activitys.Viviendas.Detalles.DetalleViviendaActivity" />
         <activity android:name=".Activitys.Viviendas.MisViviendasActivity" />
         <activity android:name=".Activitys.Viviendas.Editar_Agregar.EditarViviendaActivity" />
+        <activity android:name=".Activitys.Viviendas.CasasCercanasActivity" />
 
     </application>
 

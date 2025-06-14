@@ -1,21 +1,27 @@
 package com.example.casehive.models
 
 data class Vivienda(
-    var id: String = "", // ✅ Añadido para manejar identificadores únicos desde Firebase
-    val tipo: String = "",
-    val ubicación: String = "",
-    val superficie_m2: Int = 0,
-    val habitaciones: Int = 0,
-    val baños: Int = 0,
-    val plantas: Int = 0,
-    val precio: Int = 0,
-    val año_construcción: Int = 0,
-    val estado: String = "",
-    val certificación_energética: String = "",
-    val descripción: String = "",
-    val imágenes: List<String> = emptyList(),
-    val extras: List<String> = emptyList(),
-    val creadorId: String = ""
-)
-
-
+    var id: String = "",
+    var tipo: String = "",
+    var ubicación: String = "",
+    var descripción: String = "",
+    var habitaciones: Int = 0,
+    var baños: Int = 0,
+    var superficie_m2: Int = 0,
+    var plantas: Int = 0,
+    var precio: Int = 0,
+    var año_construcción: Int = 0,
+    var estado: String = "",
+    var certificación_energética: String = "",
+    var extras: List<String> = emptyList(),
+    var imágenes: List<String> = emptyList(),
+    var creadorId: String = "",
+    var latitud: Double? = null,
+    var longitud: Double? = null
+) {
+    // Constructor vacío necesario para Firebase
+    constructor() : this(
+        "", "", "", "", 0, 0, 0, 0, 0, 0,
+        "", "", emptyList(), emptyList(), "", null, null
+    )
+}

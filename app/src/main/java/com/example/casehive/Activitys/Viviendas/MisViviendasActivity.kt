@@ -76,6 +76,19 @@ class MisViviendasActivity : AppCompatActivity() {
                 for (data in snapshot.children) {
                     try {
                         val viviendaMap = data.value as Map<*, *>
+
+                        val extras = when (val raw = viviendaMap["extras"]) {
+                            is List<*> -> raw.filterIsInstance<String>()
+                            is Map<*, *> -> (raw as? Map<*, *>)?.values?.filterIsInstance<String>() ?: emptyList()
+                            else -> emptyList()
+                        }
+
+                        val imagenes = when (val raw = viviendaMap["imágenes"]) {
+                            is List<*> -> raw.filterIsInstance<String>()
+                            is Map<*, *> -> (raw as? Map<*, *>)?.values?.filterIsInstance<String>() ?: emptyList()
+                            else -> emptyList()
+                        }
+
                         val vivienda = Vivienda(
                             tipo = viviendaMap["tipo"] as? String ?: "",
                             ubicación = viviendaMap["ubicación"] as? String ?: "",
@@ -88,25 +101,20 @@ class MisViviendasActivity : AppCompatActivity() {
                             año_construcción = (viviendaMap["año_construcción"] as? Long)?.toInt() ?: 0,
                             estado = viviendaMap["estado"] as? String ?: "",
                             certificación_energética = viviendaMap["certificación_energética"] as? String ?: "",
-                            extras = when (val raw = viviendaMap["extras"]) {
-                                is List<*> -> raw.filterIsInstance<String>()
-                                is Map<*, *> -> raw.values.filterIsInstance<String>()
-                                else -> emptyList()
-                            },
-                            imágenes = when (val raw = viviendaMap["imágenes"]) {
-                                is List<*> -> raw.filterIsInstance<String>()
-                                is Map<*, *> -> raw.values.filterIsInstance<String>()
-                                else -> emptyList()
-                            },
+                            extras = extras,
+                            imágenes = imagenes,
                             creadorId = viviendaMap["creadorId"] as? String ?: ""
                         )
+
                         vivienda.id = data.key ?: ""
                         if (vivienda.creadorId == userId) {
                             listaViviendas.add(vivienda)
                         }
+
                     } catch (e: Exception) {
                         Toast.makeText(this@MisViviendasActivity, "Error al leer vivienda", Toast.LENGTH_SHORT).show()
                     }
+
                 }
                 adapter.notifyDataSetChanged()
             }

@@ -46,9 +46,10 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
         holder.ubicacion.text = vivienda.ubicación
         holder.precio.text = "€ ${vivienda.precio}"
 
-        val imagenesFiltradas = when (vivienda.imágenes) {
-            is List<*> -> vivienda.imágenes.filterIsInstance<String>()
-            is Map<*, *> -> vivienda.imágenes.values.filterIsInstance<String>()
+        val imagenesRaw = vivienda.imágenes
+        val imagenesFiltradas = when (imagenesRaw) {
+            is List<*> -> imagenesRaw.filterIsInstance<String>()
+            is Map<*, *> -> imagenesRaw.values.filterIsInstance<String>()
             else -> emptyList()
         }
 
@@ -95,10 +96,10 @@ class ViviendaAdapter(private val lista: List<Vivienda>) :
             }
         }
 
-        // Manejo defensivo de extras
-        val extrasFiltrados = when (vivienda.extras) {
-            is List<*> -> vivienda.extras.filterIsInstance<String>()
-            is Map<*, *> -> vivienda.extras.values.filterIsInstance<String>()
+        val extrasRaw = vivienda.extras
+        val extrasFiltrados = when (extrasRaw) {
+            is List<*> -> extrasRaw.filterIsInstance<String>()
+            is Map<*, *> -> extrasRaw.values.filterIsInstance<String>()
             else -> emptyList()
         }
 

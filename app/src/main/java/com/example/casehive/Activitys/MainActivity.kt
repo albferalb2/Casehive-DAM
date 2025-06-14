@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.casehive.Activitys.Chats.MisChatsActivity
+import com.example.casehive.Activitys.Viviendas.CasasCercanasActivity
 import com.example.casehive.Activitys.Viviendas.Editar_Agregar.AgregarViviendaActivity
 import com.example.casehive.Activitys.Viviendas.FavoritosActivity
 import com.example.casehive.Activitys.Viviendas.MisViviendasActivity
@@ -113,6 +114,10 @@ class MainActivity : AppCompatActivity() {
             val mode = if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
             AppCompatDelegate.setDefaultNightMode(mode)
         }
+        val btnCasasCercanas = findViewById<Button>(R.id.btnCasasCercanas)
+        btnCasasCercanas.setOnClickListener {
+            startActivity(Intent(this, CasasCercanasActivity::class.java))
+        }
 
 
 
@@ -126,9 +131,10 @@ class MainActivity : AppCompatActivity() {
                 listaViviendas.clear()
                 for (item in snapshot.children) {
                     try {
-                        val viviendaMap = item.value as Map<*, *>
+                        val viviendaMap = item.value as? Map<*, *> ?: continue
 
                         val vivienda = Vivienda(
+                            id = item.key ?: "",
                             tipo = viviendaMap["tipo"] as? String ?: "",
                             ubicación = viviendaMap["ubicación"] as? String ?: "",
                             descripción = viviendaMap["descripción"] as? String ?: "",
@@ -140,17 +146,13 @@ class MainActivity : AppCompatActivity() {
                             año_construcción = (viviendaMap["año_construcción"] as? Long)?.toInt() ?: 0,
                             estado = viviendaMap["estado"] as? String ?: "",
                             certificación_energética = viviendaMap["certificación_energética"] as? String ?: "",
-                            extras = when (val raw = viviendaMap["extras"]) {
-                                is List<*> -> raw.filterIsInstance<String>()
-                                is Map<*, *> -> raw.values.filterIsInstance<String>()
-                                else -> emptyList()
-                            },
-                            imágenes = when (val raw = viviendaMap["imágenes"]) {
-                                is List<*> -> raw.filterIsInstance<String>()
-                                is Map<*, *> -> raw.values.filterIsInstance<String>()
-                                else -> emptyList()
-                            },
-                            creadorId = viviendaMap["creadorId"] as? String ?: ""
+                            extras = convertirALista(viviendaMap["extras"]),
+                            imágenes = convertirALista(viviendaMap["imágenes"]),
+                            creadorId = viviendaMap["creadorId"] as? String ?: "",
+                            latitud = (viviendaMap["latitud"] as? Double)
+                                ?: (viviendaMap["latitud"] as? Long)?.toDouble(),
+                            longitud = (viviendaMap["longitud"] as? Double)
+                                ?: (viviendaMap["longitud"] as? Long)?.toDouble()
                         )
 
                         listaViviendas.add(vivienda)
@@ -167,6 +169,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 123 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -174,3 +177,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+private fun convertirALista(raw: Any?): List<String> {
+    return when (raw) {
+        is List<*> -> raw.filterIsInstance<String>()
+        is Map<*, *> -> raw.values.filterIsInstance<String>()
+        else -> emptyList()
+    }
+}
+
